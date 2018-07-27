@@ -309,6 +309,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -323,6 +324,7 @@
       <DependentUpon>eTracking.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\Comment.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="eTracking.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
