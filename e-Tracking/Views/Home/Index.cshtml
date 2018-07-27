@@ -378,7 +378,7 @@
 
     function postReply(Id, PrNumber) {
         var text = $("#inputReply_" + Id).val();
-        if (text != null) {
+        if (text) {
             var replyObj = {
                 Text: text,
                 ParentId: Id,
@@ -391,7 +391,7 @@
 
     function postComment(PrNumber) {
         var text = $("#inputComment").val();
-        if (text != null) {
+        if (text) {
             var CommentObj = {
                 Text: text,
                 PrNumber: PrNumber
@@ -407,8 +407,6 @@
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(dataObject),
             success: function (result) {
-                //location.reload();
-                console.log('result:', result);
                 if (result.isSuccess) {
                     if (result.data.ParentId) {
                         bindNewReplyHtml(result.data);
